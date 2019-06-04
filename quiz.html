@@ -1,26 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=“en”>
+
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width device-width">
     <title>Soccer Quiz</title>
-    <link rel="stylesheet" href="main.css" type="text/css"/>
+    <link rel="stylesheet" href="main.css" type="text/css">
   </head>
+
   <body>
-    <header role="banner">
-      <div class="topBanner">
-        <img class="icon" src="footballer-silhouette-20.jpg" alt="Soccer Player"/>
-      </div>
-      <div class="bottomBanner">
-        <span></span>
-      </div>
+   <header role="banner">
+       <div class="topBanner">
+           <img class="icon" src="soccerplayer.png" alt="Soccer Player"/>
+       </div>
+       <div class="bottomBanner">
+           <span></span>
+       </div>
+    </header>
+
     <main role="main">
-      <h1>Are you a Soccer fanatic?</h1>
-      <button type="button" src="footballer-silhouette-20.jgp" class="startButton">Start</button>
+
+      <section id="startSection">
+        <h1>Are you a Soccer fanatic?</h1>
+        <button type="button" class="startButton">Start</button>
+      </section>
+
+      <section id="quizSection">
+        <h2 id="questionText"></h2>
+        <form id="quizForm">
+          <fieldset>
+            <ul>
+              <li><input id="answer0" class="answer" type="radio" name="option" required></input><span id="spAns0"></span></li>
+
+              <li><input id="answer1" class="answer" type="radio" name="option" required></input><span id="spAns1"></span></li>
+
+              <li><input id="answer2" class="answer" type="radio" name="option" required></input><span id="spAns2"></span></li>
+
+              <li><input id="answer3" class="answer" type="radio" name="option" required></input><span id="spAns3"></span></li>
+            </ul>
+
+          </fieldset>
+
+          <button id="js-submit-button" type="submit" class="submit button">Submit</button>
+        </form>
+      </section>
+
+      <section id="answerbox">
+        <h2 id="selectedAns"></h2>
+        <form>
+          <button>next question</button>
+        </form>
+      </section>
     </main>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="data.js"></script>
   <script src="index.js"></script>
-</html>	
 
+</html>
