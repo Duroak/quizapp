@@ -41,16 +41,16 @@ function renderQuestion(){
          event.preventDefault();
          $('#quizSection').hide();
          $('#checkingSection').show();
-         let selectedAns = $('input:checked');
-         let answer = selectedAns.val();
-         let correctAns = ;
+         //let selectedAns = $('input:checked');
+         //let answer = selectedAns.val();
+         //let correctAns = ;
     });
  }
 
  function handleNextButton(){
 
  }
- 
+
  function answerQuestion(){
    
  }
