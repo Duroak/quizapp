@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width device-width">
+        <title>Quiz Wireframe</title>
+        <link rel="stylesheet" href="wireframe.css" type="text/css">
+    </head>
+
+    <body>
+        <!--Start Page-->
+        <header role="banner">
+            <section id="topBanner">
+                <img class="icon" src="" alt="Soccer Player"/>
+            </section>
+        </header>
+
+        <main role="main">
+            <section id="startSection">
+                <h1>Main Question?</h1>
+                <button type="button" class="startButton">start</button>
+            </section>
+            
+        <!--Question Format view-->
+            <section id="quizSection">
+                <h2 id="questionText">Question From data.js?</h2>
+                <form id="quizForm">
+                    <fieldset>
+                        <ul>
+                            <li><input id="answer0" class="answer" type="radio" name="option" required></input><span id="spAns0">Option1</span></li>
+                            <li><input id="answer1" class="answer" type="radio" name="option" required></input><span id="spAns1">Option2</span></li>
+                            <li><input id="answer2" class="answer" type="radio" name="option" required></input><span id="spAns2">Option3</span></li>
+                            <li><input id="answer3" class="answer" type="radio" name="option" required></input><span id="spAns3">Option4</span></li>
+                        </ul>
+                    </fieldset>
+                    <button id="js-submit-button" type="submit" class="submit-btn button">Submit</button>       
+                </form>
+            </section>
+        
+        <!--Checking Answer view-->
+            <section id="checkingSection">
+                <h2 id="selectedAnsText">Selected Answer</h2>
+                <p><span id="results">Checks to see if the selected answer is right</span></p>
+                <button id="js-next-button">Next Question</button>
+            </section>
+        
+        <!--Total Score view-->
+            <section id="totalScoreSection">
+                <h2 id="userScore">has the score out of 10</h2>
+                <p>Message about your what your total score is</p>
+            </section>
+        <!-- all the views have the top banner section included at the top of them-->
+        </main>
+    </body>
+</html>

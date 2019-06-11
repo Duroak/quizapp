@@ -16,7 +16,7 @@ const QUESTIONS = [
             'Paul Pogba',
             'Kylian Mbappe'
         ]
-    }
+    },
     {
         question: 'What year did Spain win their first FIFA World Cup?',
         answers: [
@@ -25,7 +25,7 @@ const QUESTIONS = [
             '2002',
             '2018'
         ]
-    }
+    },
     {
         question: 'Who Infamously Scored a goal with their hands and called it the \"The Hand of God\"?',
         answers: [
@@ -34,7 +34,7 @@ const QUESTIONS = [
             'Ronaldo (Brazil)',
             'Franz Beckenbauer'
         ]
-    }
+    },
     {
         question: 'How many ballon d\'ors does Lionel Messi have?',
         answers: [
@@ -43,7 +43,7 @@ const QUESTIONS = [
             '3',
             '5'
         ]
-    }
+    },
     {
         question: 'What were the two teams that played in the Champions League Final in 2006?',
         answers: [
@@ -52,7 +52,7 @@ const QUESTIONS = [
             'Barcelona v. Arsenal',
             'Porto v. Monaco'
         ]
-    }
+    },
     {
         question: 'Which Nation does Eden Harzard play for?',
         answers: [
@@ -61,7 +61,7 @@ const QUESTIONS = [
             'Germany',
             'Belgium'
         ]
-    }
+    },
     {
         question: 'Who is current Manager of Newcastle United?',
         answers: [
@@ -70,7 +70,7 @@ const QUESTIONS = [
             'Pep Guardiola',
             'Eddie Howe'
         ]
-    }
+    },
     {
         question: 'What is the the nickname of Leicester City F.C.?',
         answers: [
@@ -79,7 +79,7 @@ const QUESTIONS = [
             'Wolves',
             'The Swans'
         ]
-    }
+    },
     {
         question: 'Who is the top Scorer in Champions League history?',
         answers: [
@@ -88,7 +88,7 @@ const QUESTIONS = [
             'Cristiano Ronaldo',
             'Antoine Griezmann'
         ]
-    }
+    },
 ]
 
 const correctAnswer = [

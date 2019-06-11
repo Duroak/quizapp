@@ -1,79 +1,79 @@
-* {
+/* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+}*/
 
-body {
-    background-image: url("championsleague.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
+#topBanner {
+    border:1px soild black; 
+
 }
 
 .icon {
-    display: block;
+    display: block; 
     height: 300px;
     width: 200px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 35px;
+    background-color: grey;
 }
 
-h1 {
+#startSection {
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
-    margin-top: 20px;
+    font-size: 28px;
 }
 
 .startButton {
-    display: block;
-    margin: 0 auto;
     margin-top: 40px;
     width: 150px;
     height:75px;
-    font-size: 28px; 
+    font-size: 24px; 
 }
 
 #quizSection {
-    display: none;
+    border: 1px soild black;
     height: 600px;
     width: 1000px;
     margin-right: auto;
     margin-left: auto;
+    background-color: grey;
 }
 
 #questionText {
     padding-top: 35px;
-    text-align: center;
+    text-align: center; 
+}
+
+#quizForm li {
+    list-style-type: none;
 }
 
 #quizForm fieldset {
     border: 0px;
 }
 
-#js-submit-button {
-    display: block; 
-    margin: 0 auto;
+#js-sumbit-button {
+    display: block;
+    margin: 0 auto; 
 }
 
 #checkingSection {
-    display: none;
     height: 500px;
     width: 1000px;
     margin-right: auto;
     margin-left: auto;
-    background-color: black;
+    background-color: gray;
     text-align: center;
-    color: white;
 }
 
 #totalScoreSection {
-    display: none;
     height: 500px;
     width: 1000px;
     margin-right: auto;
     margin-left: auto;
-    background-color: black;
+    background-color: gray;
     text-align: center;
-    color: white;
 }

@@ -9,13 +9,10 @@
   </head>
 
   <body>
-   <header role="banner">
-       <div class="topBanner">
+    <header role="banner">
+       <section class="topBanner">
            <img class="icon" src="soccerplayer.png" alt="Soccer Player"/>
-       </div>
-       <div class="bottomBanner">
-           <span></span>
-       </div>
+       </section>
     </header>
 
     <main role="main">
@@ -31,25 +28,24 @@
           <fieldset>
             <ul>
               <li><input id="answer0" class="answer" type="radio" name="option" required></input><span id="spAns0"></span></li>
-
               <li><input id="answer1" class="answer" type="radio" name="option" required></input><span id="spAns1"></span></li>
-
               <li><input id="answer2" class="answer" type="radio" name="option" required></input><span id="spAns2"></span></li>
-
               <li><input id="answer3" class="answer" type="radio" name="option" required></input><span id="spAns3"></span></li>
             </ul>
-
           </fieldset>
-
-          <button id="js-submit-button" type="submit" class="submit button">Submit</button>
+          <button id="js-submit-button" type="submit" class="submit-btn button">Submit</button>
         </form>
       </section>
 
-      <section id="answerbox">
-        <h2 id="selectedAns"></h2>
-        <form>
-          <button>next question</button>
-        </form>
+      <section id="checkingSection">
+        <h2 id="selectedAnsText"></h2>
+        <p><span id="resultMesg"></span></p>
+        <button id="js-next-button">Next Question</button>
+      </section>
+    
+      <section id="totalScoreSection">
+        <h2 id="userScore"></h2>
+        <p></p>
       </section>
     </main>
   </body>
