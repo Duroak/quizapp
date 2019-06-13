@@ -37,18 +37,20 @@ function renderQuestion(){
  }
 
  function handleSumbitButton(){
-    $('#quizForm').on('click', '#js-submit-button', function(event){
+    $('#quizForm').on('submit', '#js-submit-button', function(event){
          event.preventDefault();
          $('#quizSection').hide();
          $('#checkingSection').show();
          //let selectedAns = $('input:checked');
          //let answer = selectedAns.val();
-         //let correctAns = ;
+         //let correctAns = `${correctanswer[questionNum]}`;
     });
  }
 
  function handleNextButton(){
-
+    $('#js-next-button').click(function(event) {
+         event.preventDefault();
+    });
  }
 
  function answerQuestion(){
@@ -61,6 +63,8 @@ function renderQuestion(){
 
  function initializeApp(){
     handleStartButton();
+    //handleNextButton();
+    handleSumbitButton();
     renderQuestion();
  }
  

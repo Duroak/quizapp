@@ -58,7 +58,7 @@ h1 {
 
 #checkingSection {
     display: none;
-    height: 500px;
+    height: 300px;
     width: 1000px;
     margin-right: auto;
     margin-left: auto;
@@ -69,7 +69,7 @@ h1 {
 
 #totalScoreSection {
     display: none;
-    height: 500px;
+    height: 300px;
     width: 1000px;
     margin-right: auto;
     margin-left: auto;
