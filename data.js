@@ -6,16 +6,18 @@ const QUESTIONS = [
             'Arsenal',
             'Chelsea',
             'Manchester United'
-        ]
+        ],
+        correctAnswer: 'Manchester United',
     },
     {
         question: 'Who is the most expensive transfer in the world?',
         answers: [
-            'Neymar jr.',
-            'Cristiano Ronaldo',
+            'Neymar Jr.',
+            'Eden Hazard',
             'Paul Pogba',
             'Kylian Mbappe'
-        ]
+        ], 
+        correctAnswer: 'Neymar jr.',
     },
     {
         question: 'What year did Spain win their first FIFA World Cup?',
@@ -24,7 +26,8 @@ const QUESTIONS = [
             '2010',
             '2002',
             '2018'
-        ]
+        ],
+        correctAnswer: '2010',
     },
     {
         question: 'Who Infamously Scored a goal with their hands and called it the \"The Hand of God\"?',
@@ -33,7 +36,8 @@ const QUESTIONS = [
             'Diego Maradona',
             'Ronaldo (Brazil)',
             'Franz Beckenbauer'
-        ]
+        ],
+        correctAnswer: 'Diego Maradona',
     },
     {
         question: 'How many ballon d\'ors does Lionel Messi have?',
@@ -42,7 +46,8 @@ const QUESTIONS = [
             '6',
             '3',
             '5'
-        ]
+        ],
+        correctAnswer: '5',
     },
     {
         question: 'What were the two teams that played in the Champions League Final in 2006?',
@@ -51,7 +56,8 @@ const QUESTIONS = [
             'Real Madrid v. Juventus',
             'Barcelona v. Arsenal',
             'Porto v. Monaco'
-        ]
+        ],
+        correctAnswer: 'Barcelona v. Arsenal',
     },
     {
         question: 'Which Nation does Eden Harzard play for?',
@@ -60,7 +66,8 @@ const QUESTIONS = [
             'Netherlands',
             'Germany',
             'Belgium'
-        ]
+        ],
+        correctAnswer: 'Belgium'
     },
     {
         question: 'Who is current Manager of Newcastle United?',
@@ -69,7 +76,8 @@ const QUESTIONS = [
             'Jose Mourinho',
             'Pep Guardiola',
             'Eddie Howe'
-        ]
+        ],
+        correctAnswer: 'Rafa Benitez',
     },
     {
         question: 'What is the the nickname of Leicester City F.C.?',
@@ -78,7 +86,8 @@ const QUESTIONS = [
             'Foxes',
             'Wolves',
             'The Swans'
-        ]
+        ],
+        correctAnswer: 'Foxes',
     },
     {
         question: 'Who is the top Scorer in Champions League history?',
@@ -87,19 +96,7 @@ const QUESTIONS = [
             'Mo Salah',
             'Cristiano Ronaldo',
             'Antoine Griezmann'
-        ]
+        ],
+        correctAnswer: 'Cristiano Ronaldo',
     },
-]
-
-const correctAnswer = [
-    'Manchester United',
-    'Neymar Jr',
-    '2010',
-    'Diego Maradona',
-    '5',
-    'Barcelona v. Arsenal',
-    'Belgium',
-    'Rafa Benitez',
-    'Foxes',
-    'Cristiano Ronaldo'
 ]

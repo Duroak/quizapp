@@ -36,35 +36,43 @@ function renderQuestion(){
     });
  }
 
- function handleSumbitButton(){
-    $('#quizForm').on('submit', '#js-submit-button', function(event){
+ function handleSubmitButton(){
+    // submits answers and checks answer selected
+    $('#quizForm').on('submit', '#js-submit-button', function (event){
          event.preventDefault();
-         $('#quizSection').hide();
-         $('#checkingSection').show();
-         //let selectedAns = $('input:checked');
-         //let answer = selectedAns.val();
-         //let correctAns = `${correctanswer[questionNum]}`;
+         let selectedAns = $('input:checked').val();
+         let correctAns = `${QUESTIONS[questionNum].correctAnswer}`;
+         if(selectedAns === correctAns) {
+            correctMessage();
+         } else {
+            incorrectMessage();
+         }        
     });
  }
 
+ function correctMessage(){
+    $('#checkingSection').show();
+    $('#quizSection').hide();
+    $('#results').html( `${QUESTIONS[questionNum].correctAnswer}` 'is correct!');
+ }
+
+ function incorrectMessage(){
+   $('#checkingSection').show();
+   $('#quizSection').hide();
+   $('#results').html( 'Wrong the correct answer is' `${QUESTIONS[questionNum].correctAnswer}`);
+ }
+
  function handleNextButton(){
-    $('#js-next-button').click(function(event) {
-         event.preventDefault();
-    });
+
  }
 
  function answerQuestion(){
    
  }
- 
- function checkAnswer(){
-
- }
 
  function initializeApp(){
     handleStartButton();
-    //handleNextButton();
-    handleSumbitButton();
+    handleSubmitButton();
     renderQuestion();
  }
  
