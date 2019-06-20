@@ -1,5 +1,6 @@
 let questionNum = 0;
 let score = 0;
+let questionNumber = 1;
 
 function renderQuestion(){
     console.log("renderQuestion ran");
@@ -19,12 +20,31 @@ function renderQuestion(){
  
  }
  
- function scoreTally() {
-   score++;
+ function scoreAdd() {
+   score ++;
  } 
 
- function nextQuestion(){
-    questionNum++;
+ function scoreChange() {
+   scoreAdd();
+   $('.score').text(score);
+ }
+
+ function updateQuestionNum(){
+    questionNum ++;
+ }
+
+ function updateQuestionDisplay() {
+    questionNumber ++;
+ }
+
+ function changeQuestion() {
+    updateQuestionDisplay();
+    $('.questionNumberDisplay').text(questionNumber);
+ }
+
+ function nextQuestion() {
+    changeQuestion();
+    updateQuestionNum();
  }
  
  function handleStartButton() {
@@ -36,41 +56,56 @@ function renderQuestion(){
     });
  }
 
- function handleSubmitButton(){
-    // submits answers and checks answer selected
-    $('#quizForm').on('submit', '#js-submit-button', function (event){
+ function handleSubmitButton() {
+    //submits answers and checks answer selected
+    $('#quizForm').on('submit', function (event){
          event.preventDefault();
          let selectedAns = $('input:checked').val();
          let correctAns = `${QUESTIONS[questionNum].correctAnswer}`;
          if(selectedAns === correctAns) {
             correctMessage();
+            scoreChange();
          } else {
             incorrectMessage();
          }        
     });
  }
 
- function correctMessage(){
+ function correctMessage() {
     $('#checkingSection').show();
     $('#quizSection').hide();
-    $('#results').html( `${QUESTIONS[questionNum].correctAnswer}` 'is correct!');
+    $('#resultMesg').html( `${QUESTIONS[questionNum].correctAnswer}` + ' is correct!');
  }
 
  function incorrectMessage(){
    $('#checkingSection').show();
    $('#quizSection').hide();
-   $('#results').html( 'Wrong the correct answer is' `${QUESTIONS[questionNum].correctAnswer}`);
+   $('#resultMesg').html('Wrong the correct answer is ' + `${QUESTIONS[questionNum].correctAnswer}`);
  }
 
  function handleNextButton(){
-
+   //Goes to next question or final results view
+   $('#checkingSection').on('click', 'js-next,button', function (event){
+      if (questionNum < QUESTIONS.length) {
+         $('#quizSection').show();
+         $('#checkingSection').hide();
+         nextQuestion();
+         renderQuestion();
+      } else {
+         renderResults();     
+      } 
+  });
  }
 
- function answerQuestion(){
-   
+  //doesn't pop up when quiz ends 
+  function renderResults() {
+    $('#totalScoreSection').show();
+    $('#checkingSection').hide();
+    $('#userScore').text('Final Score: ' + score);
  }
 
  function initializeApp(){
+    handleNextButton();
     handleStartButton();
     handleSubmitButton();
     renderQuestion();

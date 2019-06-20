@@ -11,7 +11,10 @@
   <body>
     <header role="banner">
        <section class="topBanner">
-           <img class="icon" src="soccerplayer.png" alt="Soccer Player"/>
+          <img class="icon" src="soccerplayer.png" alt="Soccer Player"/>
+       </section>
+       <section class="bottomBanner">
+          <h3>Score:<span class="score">0</span></h3>
        </section>
     </header>
 
@@ -23,6 +26,7 @@
       </section>
 
       <section id="quizSection">
+        <h1>Question: <span class = "questionNumberDisplay">1</span></h1>
         <h2 id="questionText"></h2>
         <form id="quizForm">
           <fieldset>
@@ -32,8 +36,8 @@
               <li><input id="answer2" class="answer" type="radio" name="option" required></input><span id="spAns2"></span></li>
               <li><input id="answer3" class="answer" type="radio" name="option" required></input><span id="spAns3"></span></li>
             </ul>
+            <button id="js-submit-button" type="submit" class="submit-btn button">Submit</button>
           </fieldset>
-          <button id="js-submit-button" type="submit" class="submit-btn button">Submit</button>
         </form>
       </section>
 
@@ -46,6 +50,7 @@
       <section id="totalScoreSection">
         <h2 id="userScore"></h2>
         <p></p>
+        <button id="js-restart-button">Restart Quiz</button>
       </section>
     </main>
   </body>

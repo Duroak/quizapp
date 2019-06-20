@@ -17,7 +17,7 @@ const QUESTIONS = [
             'Paul Pogba',
             'Kylian Mbappe'
         ], 
-        correctAnswer: 'Neymar jr.',
+        correctAnswer: 'Neymar Jr.',
     },
     {
         question: 'What year did Spain win their first FIFA World Cup?',
