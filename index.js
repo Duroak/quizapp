@@ -94,23 +94,23 @@ function renderQuestion(){
          $('#checkingSection').hide();
          nextQuestion();
          renderQuestion();
-      }
-      //if (questionNum < QUESTIONS.length) {
-      //   $('#quizSection').show();
-      //   $('#checkingSection').hide();
-      //   nextQuestion();
-      //   renderQuestion();
-      //} else {
-      //   renderResults();      
+      }   
   });
  }
-
-  //doesn't pop up when quiz ends 
+ 
   function renderResults() {
+    // Renders final results to the view 
     $('#totalScoreSection').show();
     $('#checkingSection').hide();
+    $('.bottomBanner').hide();
     $('#userScore').text('Final Score: ' + score);
  }
+
+  function restartQuiz() {
+     ('main').on('click', 'js-restart-button', function (event){
+      location.reload();
+     });
+  }
 
  function initializeApp(){
     handleNextButton();
