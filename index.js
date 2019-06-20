@@ -1,6 +1,6 @@
 let questionNum = 0;
 let score = 0;
-let questionNumber = 1;
+let questionNumber = 0;
 
 function renderQuestion(){
     console.log("renderQuestion ran");
@@ -53,6 +53,7 @@ function renderQuestion(){
         event.preventDefault();
         $('#startSection').hide();
         $('#quizSection').show();
+        changeQuestion();
     });
  }
 
@@ -86,14 +87,21 @@ function renderQuestion(){
  function handleNextButton(){
    //Goes to next question or final results view
    $('#checkingSection').on('click', 'js-next,button', function (event){
-      if (questionNum < QUESTIONS.length) {
+      if (questionNumber === 10) {
+         renderResults();
+      } else {
          $('#quizSection').show();
          $('#checkingSection').hide();
          nextQuestion();
          renderQuestion();
-      } else {
-         renderResults();     
-      } 
+      }
+      //if (questionNum < QUESTIONS.length) {
+      //   $('#quizSection').show();
+      //   $('#checkingSection').hide();
+      //   nextQuestion();
+      //   renderQuestion();
+      //} else {
+      //   renderResults();      
   });
  }
 
