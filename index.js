@@ -97,6 +97,17 @@ function renderQuestion(){
       }   
   });
  }
+
+  function handleRestartButton(){
+     $('#js-restart-button').on('click', function (event) {
+        score = 0;
+        questionNum = 0;
+        questionNumber = 0;
+        $('#totalScoreSection').hide();
+        $('.bottomBanner').show();
+        $('#startSection').show();
+   });
+  }
  
   function renderResults() {
     // Renders final results to the view 
@@ -106,13 +117,8 @@ function renderQuestion(){
     $('#userScore').text('Final Score: ' + score);
  }
 
-  function restartQuiz() {
-     ('main').on('click', 'js-restart-button', function (event){
-      location.reload();
-     });
-  }
-
  function initializeApp(){
+    handleRestartButton();
     handleNextButton();
     handleStartButton();
     handleSubmitButton();
