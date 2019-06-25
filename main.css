@@ -25,13 +25,19 @@ h1 {
     margin-top: 20px;
 }
 
-.bottomBanner {
+.bottomBanner ul li {
+    list-style-type: none;
     text-align: center;
+    font-size: 28px;
+    display: inline;
+    padding: 20px;
 }
 
-.bottomBanner h3 {
-    display: inline-block;    
-}
+.bottomBanner ul {
+    text-align: center;
+    margin-top: 50px;
+} 
+
 .startButton {
     display: block;
     margin: 0 auto;
@@ -74,6 +80,7 @@ h1 {
     margin-right: auto;
     margin-left: auto;
     background-color: black;
+    /*background-color: linear-gradient(circle, rgb(172, 26, 201), rgb(13, 142, 228));*/
     text-align: center;
     color: white;
 }

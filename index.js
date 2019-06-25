@@ -3,7 +3,6 @@ let score = 0;
 let questionNumber = 0;
 
 function renderQuestion(){
-    console.log("renderQuestion ran");
     $("#questionText").text(QUESTIONS[questionNum].question);
  
     $("#answer0").val(QUESTIONS[questionNum].answers[0]);
@@ -61,6 +60,7 @@ function renderQuestion(){
     //submits answers and checks answer selected
     $('#quizForm').on('submit', function (event){
          event.preventDefault();
+         //$('input[type=radio]').attr('checked',false);
          let selectedAns = $('input:checked').val();
          let correctAns = `${QUESTIONS[questionNum].correctAnswer}`;
          if(selectedAns === correctAns) {
@@ -106,6 +106,7 @@ function renderQuestion(){
         $('#totalScoreSection').hide();
         $('.bottomBanner').show();
         $('#startSection').show();
+        renderQuestion();
    });
   }
  
@@ -115,6 +116,13 @@ function renderQuestion(){
     $('#checkingSection').hide();
     $('.bottomBanner').hide();
     $('#userScore').text('Final Score: ' + score);
+    /*if (score >= 7) {
+      $('#finalMessage').html(``);
+    } else if (score < 7 && score >= 4) {
+      $('#finalMessage').html(``);
+    } else {
+      $('.finalMessage').html(``);
+    }*/
  }
 
  function initializeApp(){
@@ -125,4 +133,4 @@ function renderQuestion(){
     renderQuestion();
  }
  
- $(initializeApp)
+ $(initializeApp);

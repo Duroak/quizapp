@@ -6,6 +6,7 @@
     <meta name="viewport" content="width device-width">
     <title>Soccer Quiz</title>
     <link rel="stylesheet" href="main.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -14,8 +15,10 @@
           <img class="icon" src="soccerplayer.png" alt="Soccer Player"/>
        </section>
        <section class="bottomBanner">
-          <h3>Question: <span class = "questionNumberDisplay">0</span>/10</h3>
-          <h3>Score: <span class="score">0</span></h3>
+          <ul>
+            <li>Question: <span class = "questionNumberDisplay">0</span>/10</li>
+            <li>Score: <span class="score">0</span></li>
+          </ul>
        </section>
     </header>
 
@@ -50,9 +53,10 @@
     
       <section id="totalScoreSection">
         <h2 id="userScore"></h2>
-        <p></p>
+        <section id="finalMessage"></section>
         <button id="js-restart-button">Restart Quiz</button>
       </section>
+
     </main>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
