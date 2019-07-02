@@ -60,14 +60,15 @@ function renderQuestion(){
     //submits answers and checks answer selected
     $('#quizForm').on('submit', function (event){
          event.preventDefault();
-         //$('input[type=radio]').attr('checked',false);
          let selectedAns = $('input:checked').val();
          let correctAns = `${QUESTIONS[questionNum].correctAnswer}`;
          if(selectedAns === correctAns) {
             correctMessage();
             scoreChange();
+            $('.answer').prop('checked', false);
          } else {
             incorrectMessage();
+            $('.answer').prop('checked', false);
          }        
     });
  }
@@ -98,7 +99,8 @@ function renderQuestion(){
   });
  }
 
-  function handleRestartButton(){
+  function handleRestartButton() {
+     //
      $('#js-restart-button').on('click', function (event) {
         score = 0;
         questionNum = 0;
@@ -116,13 +118,13 @@ function renderQuestion(){
     $('#checkingSection').hide();
     $('.bottomBanner').hide();
     $('#userScore').text('Final Score: ' + score);
-    /*if (score >= 7) {
-      $('#finalMessage').html(``);
-    } else if (score < 7 && score >= 4) {
-      $('#finalMessage').html(``);
-    } else {
-      $('.finalMessage').html(``);
-    }*/
+      if (score >= 7) {
+         $('#finalMessage').html(`<p>Brilliant, "football" must be your religion.</p>`);
+         } else if (score < 7 && score >= 4) {
+         $('#finalMessage').html(`<p>Good job, to know this much you must be the causual Soccer fan.</p>`);
+         } else {
+         $('.finalMessage').html(`<p>Nice try, watch games on the weekends or even play FIFA to gain more knowledge about the beautiful game. </p>`);
+      }
  }
 
  function initializeApp(){

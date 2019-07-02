@@ -2,13 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Russo One', sans-serif;
 }
 
 body {
     background-image: url("CLbackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+#checkingSection, #totalScoreSection{
+    border: 5px solid rgb(78, 146, 173);
 }
 
 .icon {
@@ -58,6 +75,7 @@ h1 {
 #questionText {
     padding-top: 35px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 #quizForm fieldset {
@@ -68,9 +86,19 @@ h1 {
     list-style-type: none;
 }
 
+#quizForm ul li {
+    border: 1px soild rgba(13, 3, 19, 0.747); 
+    background-color: rgba(13, 3, 19, 0.747);
+    padding: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
 #js-submit-button {
     display: block; 
     margin: 0 auto;
+    padding: 15px;
+    font-size: 28px;
 }
 
 #checkingSection {
@@ -79,10 +107,21 @@ h1 {
     width: 1000px;
     margin-right: auto;
     margin-left: auto;
-    background-color: black;
-    /*background-color: linear-gradient(circle, rgb(172, 26, 201), rgb(13, 142, 228));*/
     text-align: center;
     color: white;
+    font-size: 24px;
+    background: linear-gradient(#550d4a9a, #0b2d58c4);
+}
+
+#resultMesg {
+    display: block;
+    margin-top: 100px;
+    margin-bottom: 25px;
+}
+
+#js-next-button {
+    padding: 15px;
+    font-size: 20px;
 }
 
 #totalScoreSection {
@@ -91,7 +130,51 @@ h1 {
     width: 1000px;
     margin-right: auto;
     margin-left: auto;
-    background-color: black;
     text-align: center;
     color: white;
+    font-size: 24px;
+    background: linear-gradient(#b345a044, #9198e575);
+}
+
+#userScore {
+    display: block;
+    margin-top: 20px;
+}
+
+#finalMessage {    
+    display: block;
+    margin-top: 60px;
+    margin-bottom: 25px;
+}
+
+#js-restart-button {
+    padding: 15px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 760px) {
+    header{
+        flex-direction: column;
+    }
+
+    #quizForm ul li{
+        width: 75%; 
+        margin: 0 auto;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
+    #checkingSection {
+        width: 90%;
+        margin-top: 60px;
+    }
+
+    #totalScoreSection {
+        width: 90%;
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    
 }
