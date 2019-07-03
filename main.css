@@ -55,6 +55,18 @@ h1 {
     margin-top: 50px;
 } 
 
+button {
+    background-color: rgba(110, 9, 110, 0.534);
+    border: none;
+    color: white;
+}
+
+button:hover, button:focus {
+    background-color: rgba(245, 136, 124, 0.829);
+    border: none;
+    color: black;
+}
+
 .startButton {
     display: block;
     margin: 0 auto;
@@ -94,11 +106,22 @@ h1 {
     font-size: 20px;
 }
 
+#quizForm ul li:hover, #quizForm ul li:focus {
+    border: 1px soild rgba(139, 208, 240, 0.623);
+    background-color: rgba(139, 208, 240, 0.623);
+    color: black;
+}
+
+input[type="radio"] {
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
 #js-submit-button {
     display: block; 
     margin: 0 auto;
     padding: 15px;
-    font-size: 28px;
+    font-size: 20px;
 }
 
 #checkingSection {
@@ -176,5 +199,28 @@ h1 {
 }
 
 @media screen and (max-width: 360px) {
-    
+    .icon {
+        height: 250px;
+        width: 150px;
+    }
+
+    .startButton {
+        font-size: 20px;
+    }
+
+    .h1 {
+        font-size: 20px;
+    }
+
+    #quizForm ul li {
+        font-size: 16px;
+    }
+
+    #finalMessage, #resultMesg {
+        font-size: 18px;
+    }
+
+    #userScore {
+        font-size: 26px; 
+    }
 }

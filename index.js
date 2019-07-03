@@ -100,7 +100,6 @@ function renderQuestion(){
  }
 
   function handleRestartButton() {
-     //
      $('#js-restart-button').on('click', function (event) {
         score = 0;
         questionNum = 0;
@@ -108,6 +107,7 @@ function renderQuestion(){
         $('#totalScoreSection').hide();
         $('.bottomBanner').show();
         $('#startSection').show();
+        $('.score').text(score);
         renderQuestion();
    });
   }
