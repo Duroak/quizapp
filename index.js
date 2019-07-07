@@ -108,6 +108,7 @@ function renderQuestion(){
         $('.bottomBanner').show();
         $('#startSection').show();
         $('.score').text(score);
+        $('.questionNumberDisplay').text(questionNumber);
         renderQuestion();
    });
   }
